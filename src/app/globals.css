@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+body {
+  background: #FFF8F0;
+  color: #3D2B1F;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #F0E0D0;
+    box-shadow: 0 2px 8px rgba(61, 43, 31, 0.06);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #F0E0D0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    color: #3D2B1F;
+    transition: border-color 0.2s;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #E8742D;
+    box-shadow: 0 0 0 3px rgba(232, 116, 45, 0.1);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .badge-pending { background: #FFF3E0; color: #E65100; }
+  .badge-preparing { background: #E3F2FD; color: #1565C0; }
+  .badge-completed { background: #E8F5E9; color: #2E7D32; }
+  .badge-cancelled { background: #F5F5F5; color: #616161; }
+}
